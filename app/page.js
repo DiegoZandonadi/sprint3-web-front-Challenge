@@ -1,5 +1,5 @@
-import Cartola from "./cartola";
+import RewardsPage from "./recompensa";
 
 export default function Config() {
-  return <Cartola/>;
+  return <RewardsPage/>;
 }

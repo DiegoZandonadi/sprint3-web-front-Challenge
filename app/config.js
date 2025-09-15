@@ -16,10 +16,10 @@ export default function Settings() {
         </div>
       </div>
 
-      {/* Título */}
+    
       <h2 className="text-lg font-bold mb-10">Configurações</h2>
 
-      {/* Perfil */}
+      
       <div className="flex items-center gap-4 mb-20">
         <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
      <Image src="/images/Customer.png" alt="icone" width={60} height={50} />
@@ -30,14 +30,14 @@ export default function Settings() {
         </div>
       </div>
 
-      {/* Conta */}
+     
       <div className="mb-12">
         <h3 className="font-bold mb-3">Sua Conta</h3>
         <button className="block mb-5 text-left">Mudar nome do Time</button>
         <button className="block text-left">Mudar nome de usuário</button>
       </div>
 
-      {/* Notificação */}
+    
       <div className="mb-12">
         <h3 className="font-bold mb-3">Notificação</h3>
         <div className="flex items-center justify-between  p-3 rounded-lg">
@@ -59,7 +59,6 @@ export default function Settings() {
         </div>
       </div>
 
-      {/* Logout */}
       <div className="flex justify-center">
         <button className="bg-green-500 text-black font-bold w-40 py-3 rounded-full">
           Logout

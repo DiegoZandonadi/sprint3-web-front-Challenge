@@ -18,7 +18,7 @@ export default function Cartola() {
 
 
       <div className="bg-green-700 rounded-lg w-[90%] mx-auto h-[450px] flex items-center justify-center mt-4 mb-6">
-        <span className="text-lg">[Campo com jogadoras]</span>
+        <span className="text-lg">Campo com jogadoras</span>
       </div>
 
        
