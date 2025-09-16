@@ -67,24 +67,28 @@ export default function TopPlayers() {
         </div>
 
     
-        <div className="bg-indigo-950 flex justify-around py-3">
-          <Link href="/noticias" className="flex flex-col items-center hover:text-gray-300 transition-colors">
-            <FaHome />
-            <span className="text-xs">Menu</span>
-          </Link>
-          <Link href="/teams" className="flex flex-col items-center hover:text-gray-300 transition-colors">
-            <FaUsers />
-            <span className="text-xs">Team</span>
-          </Link>
-          <Link href="/cartola" className="flex flex-col items-center hover:text-gray-300 transition-colors">
-            <FaIdCard />
-            <span className="text-xs">Cartola</span>
-          </Link>
-          <Link href="/recompensa" className="flex flex-col items-center hover:text-gray-300 transition-colors">
-            <FaGift />
-            <span className="text-xs">Recompensas</span>
-          </Link>
-        </div>
+      <div className="bg-indigo-950 flex justify-around py-3">
+        <Link href="/home" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <FaHome />
+          <span className="text-xs">Home</span>
+        </Link>
+        <Link href="/noticias" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <FaUsers />
+          <span className="text-xs">Notícias</span>
+        </Link>
+        <Link href="/teams" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <FaUsers />
+          <span className="text-xs">Team</span>
+        </Link>
+        <Link href="/cartola" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <FaIdCard />
+          <span className="text-xs">Cartola</span>
+        </Link>
+        <Link href="/recompensa" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <FaGift />
+          <span className="text-xs">Recompensas</span>
+        </Link>
+      </div>
       </div>
     </>
   );

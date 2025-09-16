@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { FaUsers, FaHome, FaIdCard, FaGift, FaChevronRight, FaGlobe, FaFlag } from "react-icons/fa";
+import { FaUsers, FaHome, FaIdCard, FaGift, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Image from "next/image";
 import Sidebar from "../../components/sidebar";
 
-export default function Temporada() {
+export default function LigaDetalhes() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -43,43 +44,50 @@ export default function Temporada() {
           </div>
         </header>
 
-        {/* Botões das ligas centralizados */}
-        <div className="flex justify-center px-4 pt-30">
-          <div className="space-y-6">
-            {/* Liga Internacional */}
-            <Link href="/liga-internacional" className="bg-purple-800 rounded-2xl p-4 flex items-center justify-between hover:bg-purple-700 transition-colors w-64">
-              <div className="flex items-center gap-3">
-                <FaGlobe className="text-white text-xl" />
-                <span className="text-white text-base font-bold">Ligas internacionais</span>
+        <div className="flex-1 px-4 py-6 relative z-10">
+          {/* Botão de voltar */}
+          <div className="mb-6">
+            <Link href="/liga-internacional" className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors">
+              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                <FaChevronLeft className="text-white text-sm" />
               </div>
-              <FaChevronRight className="text-white text-sm" />
-            </Link>
-
-            {/* Liga Nacional */}
-            <Link href="/ligas-nacionais" className="bg-purple-800 rounded-2xl p-4 flex items-center justify-between hover:bg-purple-700 transition-colors w-64">
-              <div className="flex items-center gap-3">
-                <FaFlag className="text-white text-xl" />
-                <span className="text-white text-base font-bold">Ligas nacionais</span>
-              </div>
-              <FaChevronRight className="text-white text-sm" />
             </Link>
           </div>
-        </div>
 
-        {/* Botões verdes centralizados mais para baixo */}
-        <div className="flex-1 flex items-start justify-center px-4 pt-40">
-          <div className="space-y-10">
-            {/* Placar */}
-            <Link href="/placar" className="bg-green-500 rounded-2xl p-3 flex items-center justify-between hover:bg-green-600 transition-colors w-48">
-              <span className="text-black text-base font-medium">Placar</span>
-              <FaChevronRight className="text-black text-sm" />
-            </Link>
+          {/* Liga selecionada centralizada */}
+          <div className="flex justify-center mb-8">
+            <button className="bg-purple-800 rounded-2xl p-4 flex items-center justify-between hover:bg-purple-700 transition-colors w-80">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 flex items-center justify-center">
+                  <Image
+                    src="/images/image-removebg-preview (2).png"
+                    alt="FA Women's Super League"
+                    width={48}
+                    height={48}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-white text-base font-bold">FA Women's Super League</span>
+              </div>
+              <FaChevronRight className="text-white text-sm" />
+            </button>
+          </div>
 
-            {/* Carreira */}
-            <Link href="/cartola" className="bg-green-500 rounded-2xl p-3 flex items-center justify-between hover:bg-green-600 transition-colors w-48">
-              <span className="text-black text-base font-medium">Carreira</span>
-              <FaChevronRight className="text-black text-sm" />
-            </Link>
+          {/* Botões verdes centralizados */}
+          <div className="flex-1 flex items-start justify-center px-4 pt-20">
+            <div className="space-y-10">
+              {/* Placar */}
+              <Link href="/placar" className="bg-green-500 rounded-2xl p-3 flex items-center justify-between hover:bg-green-600 transition-colors w-48">
+                <span className="text-black text-base font-medium">Placar</span>
+                <FaChevronRight className="text-black text-sm" />
+              </Link>
+
+              {/* Carreira */}
+              <Link href="/carreira" className="bg-green-500 rounded-2xl p-3 flex items-center justify-between hover:bg-green-600 transition-colors w-48">
+                <span className="text-black text-base font-medium">Carreira</span>
+                <FaChevronRight className="text-black text-sm" />
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -105,7 +113,9 @@ export default function Temporada() {
 
         {/* Elementos decorativos */}
         <div className="absolute right-0 top-1/4 w-32 h-32 bg-green-400 rounded-full opacity-60 z-0 shadow-lg shadow-green-400/50"></div>
-        <div className="absolute left-0 bottom-1/4 w-28 h-28 bg-green-300 rounded-full opacity-55 z-0 shadow-lg shadow-green-300/50"></div>
+        <div className="absolute left-0 top-3/4 w-28 h-28 bg-green-300 rounded-full opacity-55 z-0 shadow-lg shadow-green-300/50"></div>
+        <div className="absolute right-1/4 top-1/2 w-24 h-24 bg-green-400 rounded-full opacity-40 z-0 shadow-lg shadow-green-400/30"></div>
+        <div className="absolute left-1/3 bottom-1/3 w-20 h-20 bg-green-300 rounded-full opacity-50 z-0 shadow-lg shadow-green-300/40"></div>
       </div>
     </>
   );

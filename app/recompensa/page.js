@@ -97,9 +97,13 @@ export default function RewardsPage() {
 
 
         <footer className="flex justify-around items-center bg-gray-800 py-3 border-t border-gray-700">
-          <Link href="/noticias" className="flex flex-col items-center text-sm hover:text-gray-300 transition-colors">
+          <Link href="/home" className="flex flex-col items-center text-green-400 font-bold text-sm">
             <FaHome className="text-xl" />
             Menu
+          </Link>
+          <Link href="/noticias" className="flex flex-col items-center text-sm hover:text-gray-300 transition-colors">
+            <FaUsers className="text-xl" />
+            Notícias
           </Link>
           <Link href="/teams" className="flex flex-col items-center text-sm hover:text-gray-300 transition-colors">
             <FaUsers className="text-xl" />

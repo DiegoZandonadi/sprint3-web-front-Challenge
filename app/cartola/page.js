@@ -98,9 +98,13 @@ export default function Cartola() {
         </div>
 
         <footer className="fixed bottom-0 left-0 w-full bg-gray-800 text-white flex justify-around p-3">
-          <Link href="/noticias" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <Link href="/home" className="flex flex-col items-center text-green-400 font-bold">
             <FaHome />
             <span className="text-xs">Menu</span>
+          </Link>
+          <Link href="/noticias" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+            <FaUsers />
+            <span className="text-xs">Notícias</span>
           </Link>
           <Link href="/teams" className="flex flex-col items-center hover:text-gray-300 transition-colors">
             <FaUsers />

@@ -1,14 +1,27 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
   const [usuario, setUsuario] = useState("");
   const [senha, setSenha] = useState("");
+  const [erro, setErro] = useState("");
+  const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Usuário:", usuario, "Senha:", senha);
+    
+
+    if (usuario === "admin" && senha === "123456") {
+     
+      router.push("/home");
+    } else if (usuario && senha) {
+      setErro("Usuário ou senha incorretos");
+    } else {
+      setErro("Por favor, preencha todos os campos");
+    }
   };
 
   return (
@@ -21,6 +34,11 @@ export default function LoginForm() {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
+          {erro && (
+            <div className="bg-red-500 text-white p-3 rounded-lg text-sm text-center">
+              {erro}
+            </div>
+          )}
  
           <div>
             <label className="block text-lg font-bold">Login</label>
@@ -29,7 +47,10 @@ export default function LoginForm() {
               placeholder="Usuário"
               className="mt-1 w-full rounded-full bg-white border border-gray-300 px-4 py-2 text-black focus:outline-none focus:ring-2 focus:ring-green-400"
               value={usuario}
-              onChange={(e) => setUsuario(e.target.value)}
+              onChange={(e) => {
+                setUsuario(e.target.value);
+                if (erro) setErro("");
+              }}
               required
             />
           </div>
@@ -42,7 +63,10 @@ export default function LoginForm() {
               placeholder="Senha"
               className="mt-1 w-full rounded-full  bg-white border border-gray-300 px-4 py-2 text-black focus:outline-none focus:ring-2 focus:ring-green-400"
               value={senha}
-              onChange={(e) => setSenha(e.target.value)}
+              onChange={(e) => {
+                setSenha(e.target.value);
+                if (erro) setErro("");
+              }}
               required
             />
             <a href="#" className="mt-1 inline-block text-xs text-gray-300 hover:underline">

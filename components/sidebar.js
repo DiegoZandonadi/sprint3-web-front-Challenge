@@ -5,14 +5,14 @@ import { FaTimes, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
 
 export default function Sidebar({ isOpen, onClose }) {
   const menuItems = [
+    { name: "Home", path: "/home" },
     { name: "Noticias", path: "/noticias" },
     { name: "Temporada", path: "/temporada" }, 
     { name: "Carreira", path: "/cartola" },
     { name: "Time", path: "/teams" },
-    { name: "Arcadeball", path: "/" },
     { name: "Recompensas", path: "/recompensa" },
     { name: "TopGlobal", path: "/topglobal" },
-    { name: "Configuração", path: "/" }
+    { name: "Configuração", path: "/configuracoes" }
   ];
 
   const socialLinks = [
