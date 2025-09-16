@@ -1,5 +1,5 @@
-import RewardsPage from "./noticias";
+import LoginForm from "./Loginform";
 
-export default function Config() {
-  return <RewardsPage/>;
+export default function Home() {
+  return <LoginForm/>;
 }
