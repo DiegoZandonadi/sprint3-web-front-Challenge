@@ -1,4 +1,4 @@
-import RewardsPage from "./recompensa";
+import RewardsPage from "./noticias";
 
 export default function Config() {
   return <RewardsPage/>;
