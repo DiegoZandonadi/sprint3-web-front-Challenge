@@ -8,7 +8,7 @@ import {
 import Sidebar from "../../components/sidebar";
 
 export default function Cartola() {
-  const [orcamento, setOrcamento] = useState(500);
+  const [orcamento, setOrcamento] = useState(100);
   const [gasto, setGasto] = useState(0);
   const [time, setTime] = useState([]);
   const [mensagem, setMensagem] = useState("");
