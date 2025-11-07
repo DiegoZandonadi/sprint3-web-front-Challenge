@@ -1,7 +1,15 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { FaUsers, FaHome, FaIdCard, FaGift, FaChevronLeft, FaChevronDown, FaPlay } from "react-icons/fa";
+import {
+  FaUsers,
+  FaHome,
+  FaIdCard,
+  FaGift,
+  FaChevronLeft,
+  FaChevronDown,
+  FaPlay,
+} from "react-icons/fa";
 import Image from "next/image";
 import Sidebar from "../../components/sidebar";
 
@@ -27,7 +35,7 @@ export default function Placar() {
       losses: "00",
       goalsFor: "56",
       goalsAgainst: "13",
-      goalDiff: "43"
+      goalDiff: "43",
     },
     {
       position: "2°",
@@ -39,7 +47,7 @@ export default function Placar() {
       losses: "03",
       goalsFor: "48",
       goalsAgainst: "18",
-      goalDiff: "30"
+      goalDiff: "30",
     },
     {
       position: "3°",
@@ -51,7 +59,7 @@ export default function Placar() {
       losses: "04",
       goalsFor: "45",
       goalsAgainst: "20",
-      goalDiff: "25"
+      goalDiff: "25",
     },
     {
       position: "4°",
@@ -63,33 +71,37 @@ export default function Placar() {
       losses: "05",
       goalsFor: "42",
       goalsAgainst: "22",
-      goalDiff: "20"
-    }
+      goalDiff: "20",
+    },
   ];
 
   return (
     <>
       <Sidebar isOpen={isMenuOpen} onClose={closeMenu} />
-      
-      <div className={`min-h-screen bg-gradient-to-b from-gray-900 to-indigo-950 text-white flex flex-col transition-transform duration-300 ease-in-out relative ${isMenuOpen ? 'transform -translate-x-80' : ''}`} style={{
-        backgroundImage: `linear-gradient(to bottom, #111827, #312e81), repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 15px,
-          rgba(255,255,255,0.02) 15px,
-          rgba(255,255,255,0.02) 30px
-        )`
-      }}>
 
+      <div
+        className={`min-h-screen bg-gradient-to-b from-gray-900 to-indigo-950 text-white flex flex-col transition-transform duration-300 ease-in-out relative ${
+          isMenuOpen ? "transform -translate-x-80" : ""
+        }`}
+        style={{
+          backgroundImage: `linear-gradient(to bottom, #111827, #312e81), repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 15px,
+            rgba(255,255,255,0.02) 15px,
+            rgba(255,255,255,0.02) 30px
+          )`,
+        }}
+      >
         <header className="flex items-center justify-between px-4 py-3 bg-gray-800">
-          <button 
-            aria-label="Abrir menu" 
+          <button
+            aria-label="Abrir menu"
             className="text-2xl hover:text-gray-300 transition-colors"
             onClick={toggleMenu}
           >
             ☰
           </button>
-          <h1 className="font-bold text-lg">Fernando torres</h1>
+          <h1 className="font-bold text-lg">Fernando Torres</h1>
           <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-black">
             <FaUsers />
           </div>
@@ -98,7 +110,10 @@ export default function Placar() {
         <div className="flex-1 px-4 py-6 relative z-10">
           {/* Botão de voltar */}
           <div className="mb-6">
-            <Link href="/liga-detalhes" className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors">
+            <Link
+              href="/liga-detalhes"
+              className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
+            >
               <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                 <FaChevronLeft className="text-white text-sm" />
               </div>
@@ -118,13 +133,15 @@ export default function Placar() {
             <div className="w-8 h-8 flex items-center justify-center">
               <Image
                 src="/images/image-removebg-preview (2).png"
-                alt="FA Women's Super League"
+                alt="FA Women&apos;s Super League"
                 width={32}
                 height={32}
                 className="object-contain"
               />
             </div>
-            <span className="text-white font-medium">FA Women's Super League</span>
+            <span className="text-white font-medium">
+              FA Women&apos;s Super League
+            </span>
           </div>
 
           {/* Player de vídeo */}
@@ -152,13 +169,22 @@ export default function Placar() {
                 <div className="text-center">GC</div>
                 <div className="text-center">SG</div>
               </div>
-              
+
               {/* Linhas da tabela */}
               {standings.map((team, index) => (
-                <div key={index} className="bg-purple-800 px-3 py-3 grid grid-cols-10 gap-2 text-xs border-t border-purple-600">
-                  <div className="text-center font-bold text-sm">{team.position}</div>
-                  <div className="text-left col-span-2 truncate text-sm">{team.team}</div>
-                  <div className="text-center font-bold text-sm">{team.points}</div>
+                <div
+                  key={index}
+                  className="bg-purple-800 px-3 py-3 grid grid-cols-10 gap-2 text-xs border-t border-purple-600"
+                >
+                  <div className="text-center font-bold text-sm">
+                    {team.position}
+                  </div>
+                  <div className="text-left col-span-2 truncate text-sm">
+                    {team.team}
+                  </div>
+                  <div className="text-center font-bold text-sm">
+                    {team.points}
+                  </div>
                   <div className="text-center text-sm">{team.played}</div>
                   <div className="text-center text-sm">{team.wins}</div>
                   <div className="text-center text-sm">{team.draws}</div>
@@ -169,7 +195,7 @@ export default function Placar() {
                 </div>
               ))}
             </div>
-            
+
             {/* Botão ver mais */}
             <div className="text-center mt-2">
               <button className="text-white text-sm hover:text-green-400 transition-colors">
@@ -180,8 +206,10 @@ export default function Placar() {
 
           {/* Próximos jogos */}
           <div className="mb-6">
-            <h3 className="text-green-400 font-bold text-lg mb-4">Próximos jogos</h3>
-            
+            <h3 className="text-green-400 font-bold text-lg mb-4">
+              Próximos jogos
+            </h3>
+
             {/* Card do jogo */}
             <div className="bg-purple-800 rounded-lg p-4">
               <div className="flex items-center justify-between mb-4">
@@ -192,10 +220,10 @@ export default function Placar() {
                   </div>
                   <span className="text-white text-sm">United</span>
                 </div>
-                
+
                 {/* VS */}
                 <div className="text-white text-2xl font-bold">X</div>
-                
+
                 {/* Chelsea */}
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-2">
@@ -204,7 +232,7 @@ export default function Placar() {
                   <span className="text-white text-sm">Chelsea</span>
                 </div>
               </div>
-              
+
               {/* Barra de progresso */}
               <div className="flex h-2 rounded-full overflow-hidden mb-4">
                 <div className="bg-red-500 flex-1"></div>
@@ -212,7 +240,7 @@ export default function Placar() {
                 <div className="bg-blue-500 flex-1"></div>
               </div>
             </div>
-            
+
             {/* Botão ver mais jogos */}
             <div className="text-center mt-2">
               <button className="text-green-400 text-sm hover:text-green-300 transition-colors">
@@ -224,19 +252,31 @@ export default function Placar() {
 
         {/* Navegação Inferior */}
         <div className="bg-indigo-950 flex justify-around py-3">
-          <Link href="/home" className="flex flex-col items-center text-green-400 font-bold">
+          <Link
+            href="/home"
+            className="flex flex-col items-center text-green-400 font-bold"
+          >
             <FaHome />
             <span className="text-xs">Menu</span>
           </Link>
-          <Link href="/teams" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <Link
+            href="/teams"
+            className="flex flex-col items-center hover:text-gray-300 transition-colors"
+          >
             <FaUsers />
             <span className="text-xs">Team</span>
           </Link>
-          <Link href="/cartola" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <Link
+            href="/cartola"
+            className="flex flex-col items-center hover:text-gray-300 transition-colors"
+          >
             <FaIdCard />
             <span className="text-xs">Cartola</span>
           </Link>
-          <Link href="/recompensa" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <Link
+            href="/recompensa"
+            className="flex flex-col items-center hover:text-gray-300 transition-colors"
+          >
             <FaGift />
             <span className="text-xs">Recompensas</span>
           </Link>

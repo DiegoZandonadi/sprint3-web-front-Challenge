@@ -98,7 +98,7 @@ export default function Carreira() {
           >
             ☰
           </button>
-          <h1 className="font-bold text-lg">Fernando torres</h1>
+          <h1 className="font-bold text-lg">Fernando Torres</h1>
           <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-black">
             <FaUsers />
           </div>
@@ -121,13 +121,13 @@ export default function Carreira() {
                 <div className="w-12 h-12 flex items-center justify-center">
                   <Image
                     src="/images/image-removebg-preview (2).png"
-                    alt="FA Women's Super League"
+                    alt="FA Women&apos;s Super League"
                     width={48}
                     height={48}
                     className="object-contain"
                   />
                 </div>
-                <span className="text-white text-base font-bold">FA Women's Super League</span>
+                <span className="text-white text-base font-bold">FA Women&apos;s Super League</span>
               </div>
               <FaChevronRight className="text-white text-sm" />
             </button>

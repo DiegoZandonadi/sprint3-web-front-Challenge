@@ -20,25 +20,29 @@ export default function LigaDetalhes() {
     <>
       <Sidebar isOpen={isMenuOpen} onClose={closeMenu} />
       
-      <div className={`min-h-screen bg-gradient-to-b from-gray-900 to-indigo-950 text-white flex flex-col transition-transform duration-300 ease-in-out relative ${isMenuOpen ? 'transform -translate-x-80' : ''}`} style={{
-        backgroundImage: `linear-gradient(to bottom, #111827, #312e81), repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 15px,
-          rgba(255,255,255,0.02) 15px,
-          rgba(255,255,255,0.02) 30px
-        )`
-      }}>
-
+      <div
+        className={`min-h-screen bg-gradient-to-b from-gray-900 to-indigo-950 text-white flex flex-col transition-transform duration-300 ease-in-out relative ${
+          isMenuOpen ? "transform -translate-x-80" : ""
+        }`}
+        style={{
+          backgroundImage: `linear-gradient(to bottom, #111827, #312e81), repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 15px,
+            rgba(255,255,255,0.02) 15px,
+            rgba(255,255,255,0.02) 30px
+          )`,
+        }}
+      >
         <header className="flex items-center justify-between px-4 py-3 bg-gray-800">
-          <button 
-            aria-label="Abrir menu" 
+          <button
+            aria-label="Abrir menu"
             className="text-2xl hover:text-gray-300 transition-colors"
             onClick={toggleMenu}
           >
             ☰
           </button>
-          <h1 className="font-bold text-lg">Fernando torres</h1>
+          <h1 className="font-bold text-lg">Fernando Torres</h1>
           <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-black">
             <FaUsers />
           </div>
@@ -47,7 +51,10 @@ export default function LigaDetalhes() {
         <div className="flex-1 px-4 py-6 relative z-10">
           {/* Botão de voltar */}
           <div className="mb-6">
-            <Link href="/liga-internacional" className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors">
+            <Link
+              href="/liga-internacional"
+              className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
+            >
               <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                 <FaChevronLeft className="text-white text-sm" />
               </div>
@@ -61,13 +68,15 @@ export default function LigaDetalhes() {
                 <div className="w-12 h-12 flex items-center justify-center">
                   <Image
                     src="/images/image-removebg-preview (2).png"
-                    alt="FA Women's Super League"
+                    alt="FA Women&apos;s Super League"
                     width={48}
                     height={48}
                     className="object-contain"
                   />
                 </div>
-                <span className="text-white text-base font-bold">FA Women's Super League</span>
+                <span className="text-white text-base font-bold">
+                  FA Women&apos;s Super League
+                </span>
               </div>
               <FaChevronRight className="text-white text-sm" />
             </button>
@@ -77,13 +86,19 @@ export default function LigaDetalhes() {
           <div className="flex-1 flex items-start justify-center px-4 pt-20">
             <div className="space-y-10">
               {/* Placar */}
-              <Link href="/placar" className="bg-green-500 rounded-2xl p-3 flex items-center justify-between hover:bg-green-600 transition-colors w-48">
+              <Link
+                href="/placar"
+                className="bg-green-500 rounded-2xl p-3 flex items-center justify-between hover:bg-green-600 transition-colors w-48"
+              >
                 <span className="text-black text-base font-medium">Placar</span>
                 <FaChevronRight className="text-black text-sm" />
               </Link>
 
               {/* Carreira */}
-              <Link href="/carreira" className="bg-green-500 rounded-2xl p-3 flex items-center justify-between hover:bg-green-600 transition-colors w-48">
+              <Link
+                href="/carreira"
+                className="bg-green-500 rounded-2xl p-3 flex items-center justify-between hover:bg-green-600 transition-colors w-48"
+              >
                 <span className="text-black text-base font-medium">Carreira</span>
                 <FaChevronRight className="text-black text-sm" />
               </Link>
@@ -93,19 +108,31 @@ export default function LigaDetalhes() {
 
         {/* Navegação Inferior */}
         <div className="bg-indigo-950 flex justify-around py-3">
-          <Link href="/home" className="flex flex-col items-center text-green-400 font-bold">
+          <Link
+            href="/home"
+            className="flex flex-col items-center text-green-400 font-bold"
+          >
             <FaHome />
             <span className="text-xs">Menu</span>
           </Link>
-          <Link href="/teams" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <Link
+            href="/teams"
+            className="flex flex-col items-center hover:text-gray-300 transition-colors"
+          >
             <FaUsers />
             <span className="text-xs">Team</span>
           </Link>
-          <Link href="/cartola" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <Link
+            href="/cartola"
+            className="flex flex-col items-center hover:text-gray-300 transition-colors"
+          >
             <FaIdCard />
             <span className="text-xs">Cartola</span>
           </Link>
-          <Link href="/recompensa" className="flex flex-col items-center hover:text-gray-300 transition-colors">
+          <Link
+            href="/recompensa"
+            className="flex flex-col items-center hover:text-gray-300 transition-colors"
+          >
             <FaGift />
             <span className="text-xs">Recompensas</span>
           </Link>
