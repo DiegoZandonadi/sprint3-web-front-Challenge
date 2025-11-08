@@ -9,6 +9,7 @@ export default function Sidebar({ isOpen, onClose }) {
     { name: "Noticias", path: "/noticias" },
     { name: "Temporada", path: "/temporada" }, 
     { name: "Carreira", path: "/cartola" },
+    { name: "Estatísticas", path: "/estatisticas" },
     { name: "Time", path: "/teams" },
     { name: "Recompensas", path: "/recompensa" },
     { name: "TopGlobal", path: "/topglobal" },
